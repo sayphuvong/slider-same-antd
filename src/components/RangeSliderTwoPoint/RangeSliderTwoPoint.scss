@@ -1,0 +1,33 @@
+.range-slider-two.progress {
+    height: 5px;
+    background: #005E95;
+    position: absolute;
+    left: 0;
+    width: 20%;
+    border-radius: 10px;
+}
+
+.range-slider-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,0);
+    pointer-events: none;
+}
+
+.track {
+    pointer-events: none;
+}
+
+.thumb {
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.range-slider-one {
+    .track {
+        pointer-events: auto;
+        cursor: pointer;
+    }
+}
