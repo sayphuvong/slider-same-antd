@@ -1,0 +1,80 @@
+.range-slider-wrap {
+    width: 50vw;
+    height: 100px;
+    background: #fff;
+    position: relative;
+    padding: 30px;
+}
+
+@mixin styleForLine {
+    height: 5px;
+}
+
+.track {
+    @include styleForLine;
+    width: 100%;
+    // margin-left: 5%;
+    top: 50px;
+    background: #E2E2E2;
+    position: relative;
+    border-radius: 10px;
+}
+
+.progress {
+    @include styleForLine;
+    background: #005E95;
+    position: absolute;
+    left: 0;
+    width: 0;
+    border-radius: 10px;
+}
+
+$thumbSize: 18px;
+.thumb {
+    box-sizing: border-box;
+    width: $thumbSize;
+    height: $thumbSize;
+    border-radius: 50%;
+    background: #fff;
+    border: 4px solid #005E95;
+    position: absolute;
+    top: calc(50% - #{$thumbSize} / 2);
+    left: -$thumbSize/2; 
+    z-index: 100;
+}
+
+.left-value, .right-value {
+    color: #fff;
+    position: absolute;
+    top: -40px;
+}
+
+.left-value {
+    left: -10px;
+}
+
+.right-value {
+    right: -20px;
+}
+
+.current-value {
+    max-width: 50px;
+    background: yellow;
+    color: red;
+    padding: 10px;
+    border-radius: 30%;
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    // left: -21px;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+  }
